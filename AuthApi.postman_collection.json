@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "55576744-0f04-48af-9504-87c1e732f8a2",
+		"name": "AuthApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "login",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5235/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5235",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "login",
+							"value": "user",
+							"description": "\n",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "passwordConfirm",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "bob",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5235/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5235",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserInfo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidXNlcjIiLCJleHAiOjE2NjczMjYyOTAsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjUyMzUvIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTIzNS8ifQ.5T8smyy0CCCaAaVInddcrU2ju2iuMwRojaQhkeuRRIY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5235/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5235",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUserInfo",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidXNlciIsImV4cCI6MTY2NzMyOTE5NywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTIzNS8iLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo1MjM1LyJ9.vSdG4z1DQaSa92F76TMgEId7ke_NndloZpiz5VeRzMY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "anton",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "ivanov",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "aivanov@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "123-445-4545",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5235/account/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5235",
+					"path": [
+						"account",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
