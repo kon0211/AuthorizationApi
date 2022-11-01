@@ -55,7 +55,7 @@ namespace AuthorizationApi.Controllers
         }
 
         [Authorize]
-        [HttpPatch("/account/update")]
+        [HttpPut("/account/update")]
         public async Task<IActionResult> Update(UpdateUserModel model)
         {
             var user = await userRepository.GetUserByLogin(HttpContext.User.Identity.Name);
